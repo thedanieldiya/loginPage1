@@ -5,15 +5,98 @@
 }
 
 body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr;
     background-image: url(images/banner-with-blue-orange-balls-generative-al.jpg);
     width: 100%;
     height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #navbar {
     display: grid;
-    
+    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-template-columns: 250px 1fr;
+    /* grid-template-rows: 50px; */
+    background-color: rgb(49, 48, 48, 0.637);
+    backdrop-filter: blur(5px);
+    /* margin-top: 50%;
+    margin-bottom: 50%;*/
+} 
+
+.logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.navlist {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mylist{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* margin-right: 250px; */
+} 
+
+.list li{
+    display: inline-flex;
+    margin-right: 80px;
+    list-style: none;
+}
+
+.list li a{
+    font-size: 16px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.list li a:hover{
+    background-color: rgba(251, 247, 247, 0.388);
+    backdrop-filter: blur(20px);
+    padding: 10px 20px;
+    border-radius: 32px;
+    font-weight: bolder;
+}
+
+
+
+.content {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logInForm {
+    display: grid;
+    grid-template-columns: 1/2;
+    grid-template-rows: 100px 200px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(49, 49, 49);
+    width: 350px;
+    height: 350px;
+    background-color: rgba(251, 247, 247, 0.388);
+    backdrop-filter: blur(20px);
+    box-shadow: 2px 5px 15px black;
 }
